@@ -1,0 +1,15 @@
+db -> blog
+tablas {
+  users {
+    id -> int identity (1, 1) primary key,
+    username -> varchar (16) not null,
+    password -> varchar (200) not null
+  },
+  publications {
+    id -> int identity (1, 1) primary key,
+    user_id -> int not null,
+    title -> varchar (200) not null,
+    body -> text not null,
+    (not yet)img_files -> allow null
+  }
+}
