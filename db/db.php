@@ -5,10 +5,15 @@ $username = "root";
 $password = "";
 $database = "blog";
 
-$conn = mysqli_connect($server, $username, $password, $database);
+$conn = mysqli_connect(
+  $server, 
+  $username, 
+  $password, 
+  $database
+);
 
 if (!$conn) {
-  echo 'error in the db';
+  die ('error in the db');
 }
 
 ?>
